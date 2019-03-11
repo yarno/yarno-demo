@@ -12,7 +12,7 @@ It showcases examples of what it might be like for them to use the Yarno platfor
 
 Rebuild our existing demo tool using React. As this is a demo tool, the functionality required is not full featured. For example, we do not need to authenticate a user, although we do want to simulate the login screen.
 
-We would like the ability to display three questions with four possible answers, and have the app react to correct and incorrect selections.
+We would like the ability to display three questions each with four possible answers, and have the app react to correct and incorrect selections.
 
 For incorrect selections, we want to show a button with a link to the explanation.
 
