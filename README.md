@@ -1,68 +1,44 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Yarno Demo Tool Exercise
 
-## Available Scripts
+## What is the demo tool?
 
-In the project directory, you can run:
+We have a custom built demo tool that is used by Mark, our head of sales, when presenting Yarno to potential clients. The demo tool is set up so that Mark can easily customise it with images and questions relevant to the potential client.
 
-### `npm start`
+It showcases examples of what it might be like for them to use the Yarno platform with their employees.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[Click here to view the existing demo tool](https://demo.yarno.com.au/woolworths-c80).
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## What is our ultimate goal?
 
-### `npm test`
+Rebuild our existing demo tool using React. As this is a demo tool, the functionality required is not full featured. For example, we do not need to authenticate a user, although we do want to simulate the login screen.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+We would like the ability to display three questions with four possible answers, and have the app react to correct and incorrect selections.
 
-### `npm run build`
+For incorrect selections, we want to show a button with a link to the explanation.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+We will need to show a Next Question button once a question has been answered.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## What is expected of you with this exercise?
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+You are not expected to complete this exercise in full. It is an opportunity for you to think about how you would approach building and styling this tool with React, discuss your approach with Paul, and develop as much of it as you can in the allotted period of time.
 
-### `npm run eject`
+Do not be concerned with how much or little you are able to complete, there is much to do in a short period of time. Simply discuss your approach, work on what you are able to work on, and ask for help when you need it. Paul is there as a sounding board and to help you out.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## What is already done?
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The app is set up as an empty shell. The router has been set up, with an empty login page. In the main Yarno app, we use Styled Components, a CSS in JS library. This has been set up in the app already and you can see how it is used by looking in `Login.js` and `styledComponents.js`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Where to begin?
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Once you have cloned or downloaded the app, run `yarn` and then `yarn start`. Visit the app at http://localhost:3000/ and you should see a basic login page. Use Chrome developer tools to view this in a mobile orientation.
 
-## Learn More
+The login page is missing a login button. Start by building the login button (modelling it on what you see when visiting [the demo app login page](https://demo.yarno.com.au/woolworths-c80/)). You can choose to use Styled Components or style a `<button>` element by hand.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Steps:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- build the Login button
+- create a question page that loads the first question and four possible answers
+  - there is a `questions.js` file for you to use
+- create a "show results" button that handles right or wrong answers
+- show a "show explanation" button for incorret answers that somehow shows the explanation
+- show a "Next Question" button that takes you to the next question
